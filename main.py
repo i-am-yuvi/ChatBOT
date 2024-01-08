@@ -1,13 +1,17 @@
 # This is a sample Python script.
+from dotenv import load_dotenv
 import streamlit as st
 import openai
 import os
 
+# Load the .env file
+load_dotenv()
+
 # Set your OpenAI API key here
-api_key = os.environ.get("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API")
 openai.api_key = api_key
 
-# Press the green button in the gutter to run the script.
+
 def main():
     st.title("ChatBOT")
     # st.file_uploader("Open", type="mp3")
